@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4553331F1519BDAE00B61ABC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4553331E1519BDAE00B61ABC /* UIKit.framework */; };
+		455333211519BDAE00B61ABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455333201519BDAE00B61ABC /* Foundation.framework */; };
+		455333231519BDAE00B61ABC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455333221519BDAE00B61ABC /* CoreGraphics.framework */; };
+		455333291519BDAE00B61ABC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 455333271519BDAE00B61ABC /* InfoPlist.strings */; };
+		4553332B1519BDAE00B61ABC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4553332A1519BDAE00B61ABC /* main.m */; };
+		4553332F1519BDAE00B61ABC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4553332E1519BDAE00B61ABC /* AppDelegate.m */; };
+		455333321519BDAE00B61ABC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455333311519BDAE00B61ABC /* ViewController.m */; };
+		455333351519BDAE00B61ABC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455333331519BDAE00B61ABC /* ViewController.xib */; };
+		4553333D1519BDCE00B61ABC /* MyBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4553333C1519BDCE00B61ABC /* MyBezierPath.m */; };
+		455333401519BDED00B61ABC /* ControlPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4553333F1519BDED00B61ABC /* ControlPointView.m */; };
+		455333431519BE5800B61ABC /* StartPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 455333421519BE5800B61ABC /* StartPointView.m */; };
+		455333451519CB7400B61ABC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455333441519CB7400B61ABC /* QuartzCore.framework */; };
+		455333481519CC5600B61ABC /* MovableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 455333471519CC5600B61ABC /* MovableView.m */; };
+		45533AFF1519D42A00062638 /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = 45533AFE1519D42A00062638 /* bird.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4553331A1519BDAE00B61ABC /* bezierdrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bezierdrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4553331E1519BDAE00B61ABC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		455333201519BDAE00B61ABC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		455333221519BDAE00B61ABC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		455333261519BDAE00B61ABC /* bezierdrawing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bezierdrawing-Info.plist"; sourceTree = "<group>"; };
+		455333281519BDAE00B61ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4553332A1519BDAE00B61ABC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4553332C1519BDAE00B61ABC /* bezierdrawing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bezierdrawing-Prefix.pch"; sourceTree = "<group>"; };
+		4553332D1519BDAE00B61ABC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4553332E1519BDAE00B61ABC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		455333301519BDAE00B61ABC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		455333311519BDAE00B61ABC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		455333341519BDAE00B61ABC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		4553333B1519BDCE00B61ABC /* MyBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBezierPath.h; sourceTree = "<group>"; };
+		4553333C1519BDCE00B61ABC /* MyBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBezierPath.m; sourceTree = "<group>"; };
+		4553333E1519BDED00B61ABC /* ControlPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPointView.h; sourceTree = "<group>"; };
+		4553333F1519BDED00B61ABC /* ControlPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlPointView.m; sourceTree = "<group>"; };
+		455333411519BE5800B61ABC /* StartPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartPointView.h; sourceTree = "<group>"; };
+		455333421519BE5800B61ABC /* StartPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPointView.m; sourceTree = "<group>"; };
+		455333441519CB7400B61ABC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		455333461519CC5600B61ABC /* MovableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovableView.h; sourceTree = "<group>"; };
+		455333471519CC5600B61ABC /* MovableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovableView.m; sourceTree = "<group>"; };
+		45533AFE1519D42A00062638 /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		455333171519BDAE00B61ABC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455333451519CB7400B61ABC /* QuartzCore.framework in Frameworks */,
+				4553331F1519BDAE00B61ABC /* UIKit.framework in Frameworks */,
+				455333211519BDAE00B61ABC /* Foundation.framework in Frameworks */,
+				455333231519BDAE00B61ABC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4553330F1519BDAE00B61ABC = {
+			isa = PBXGroup;
+			children = (
+				455333441519CB7400B61ABC /* QuartzCore.framework */,
+				455333241519BDAE00B61ABC /* bezierdrawing */,
+				4553331D1519BDAE00B61ABC /* Frameworks */,
+				4553331B1519BDAE00B61ABC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4553331B1519BDAE00B61ABC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4553331A1519BDAE00B61ABC /* bezierdrawing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4553331D1519BDAE00B61ABC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4553331E1519BDAE00B61ABC /* UIKit.framework */,
+				455333201519BDAE00B61ABC /* Foundation.framework */,
+				455333221519BDAE00B61ABC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		455333241519BDAE00B61ABC /* bezierdrawing */ = {
+			isa = PBXGroup;
+			children = (
+				45B2375A151A0FA2006D3EB0 /* Shared */,
+				45B23759151A0F64006D3EB0 /* BezierPath */,
+				4553332D1519BDAE00B61ABC /* AppDelegate.h */,
+				4553332E1519BDAE00B61ABC /* AppDelegate.m */,
+				455333301519BDAE00B61ABC /* ViewController.h */,
+				455333311519BDAE00B61ABC /* ViewController.m */,
+				455333331519BDAE00B61ABC /* ViewController.xib */,
+				455333251519BDAE00B61ABC /* Supporting Files */,
+				45533AFE1519D42A00062638 /* bird.png */,
+			);
+			path = bezierdrawing;
+			sourceTree = "<group>";
+		};
+		455333251519BDAE00B61ABC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				455333261519BDAE00B61ABC /* bezierdrawing-Info.plist */,
+				455333271519BDAE00B61ABC /* InfoPlist.strings */,
+				4553332A1519BDAE00B61ABC /* main.m */,
+				4553332C1519BDAE00B61ABC /* bezierdrawing-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45B23759151A0F64006D3EB0 /* BezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				4553333B1519BDCE00B61ABC /* MyBezierPath.h */,
+				4553333C1519BDCE00B61ABC /* MyBezierPath.m */,
+				455333411519BE5800B61ABC /* StartPointView.h */,
+				455333421519BE5800B61ABC /* StartPointView.m */,
+				4553333E1519BDED00B61ABC /* ControlPointView.h */,
+				4553333F1519BDED00B61ABC /* ControlPointView.m */,
+			);
+			name = BezierPath;
+			sourceTree = "<group>";
+		};
+		45B2375A151A0FA2006D3EB0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				455333461519CC5600B61ABC /* MovableView.h */,
+				455333471519CC5600B61ABC /* MovableView.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		455333191519BDAE00B61ABC /* bezierdrawing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 455333381519BDAE00B61ABC /* Build configuration list for PBXNativeTarget "bezierdrawing" */;
+			buildPhases = (
+				455333161519BDAE00B61ABC /* Sources */,
+				455333171519BDAE00B61ABC /* Frameworks */,
+				455333181519BDAE00B61ABC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bezierdrawing;
+			productName = bezierdrawing;
+			productReference = 4553331A1519BDAE00B61ABC /* bezierdrawing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		455333111519BDAE00B61ABC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 455333141519BDAE00B61ABC /* Build configuration list for PBXProject "bezierdrawing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4553330F1519BDAE00B61ABC;
+			productRefGroup = 4553331B1519BDAE00B61ABC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				455333191519BDAE00B61ABC /* bezierdrawing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		455333181519BDAE00B61ABC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455333291519BDAE00B61ABC /* InfoPlist.strings in Resources */,
+				455333351519BDAE00B61ABC /* ViewController.xib in Resources */,
+				45533AFF1519D42A00062638 /* bird.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		455333161519BDAE00B61ABC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4553332B1519BDAE00B61ABC /* main.m in Sources */,
+				4553332F1519BDAE00B61ABC /* AppDelegate.m in Sources */,
+				455333321519BDAE00B61ABC /* ViewController.m in Sources */,
+				4553333D1519BDCE00B61ABC /* MyBezierPath.m in Sources */,
+				455333401519BDED00B61ABC /* ControlPointView.m in Sources */,
+				455333431519BE5800B61ABC /* StartPointView.m in Sources */,
+				455333481519CC5600B61ABC /* MovableView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		455333271519BDAE00B61ABC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455333281519BDAE00B61ABC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		455333331519BDAE00B61ABC /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				455333341519BDAE00B61ABC /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		455333361519BDAE00B61ABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		455333371519BDAE00B61ABC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		455333391519BDAE00B61ABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bezierdrawing/bezierdrawing-Prefix.pch";
+				INFOPLIST_FILE = "bezierdrawing/bezierdrawing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4553333A1519BDAE00B61ABC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bezierdrawing/bezierdrawing-Prefix.pch";
+				INFOPLIST_FILE = "bezierdrawing/bezierdrawing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		455333141519BDAE00B61ABC /* Build configuration list for PBXProject "bezierdrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455333361519BDAE00B61ABC /* Debug */,
+				455333371519BDAE00B61ABC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		455333381519BDAE00B61ABC /* Build configuration list for PBXNativeTarget "bezierdrawing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455333391519BDAE00B61ABC /* Debug */,
+				4553333A1519BDAE00B61ABC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 455333111519BDAE00B61ABC /* Project object */;
+}

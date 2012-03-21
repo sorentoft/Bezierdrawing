@@ -1,0 +1,16 @@
+//
+//  ViewController.h
+//  bezierdrawing
+//
+//  Created by Søren Toft on 3/21/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+#import "MovableView.h"
+#import "MyBezierPath.h"
+
+@interface ViewController : UIViewController<MovableViewDelegate, MyBezierPathDelegate>
+
+@end
