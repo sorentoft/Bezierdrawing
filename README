@@ -1,0 +1,4 @@
+This is a small tool that you may use to interactivly draw and visualize bezier paths on an iPhone or iPad. 
+
+Use the tool for interactivly creating and visualing a bazier path. The path can be used for drawing the content of some UIView, or for animating some object along that path. 
+
