@@ -41,6 +41,7 @@
 
     [self setupStartAnimationButton];
     [self setupAddPointButton];
+    [self setupLogCoordinatesButton];    
     
     //Add a signle start point
     _startPoint = [[StartPointView alloc] initWithPosition:CGPointMake(200, 200) pointNumber:0];  
@@ -62,23 +63,31 @@
 }
 
 - (void)setupStartAnimationButton {
-    UIButton *animateButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    animateButton.frame = CGRectMake(10, 10, 100, 30);
-    animateButton.backgroundColor = [UIColor blackColor];
-    [animateButton setTitle:@"Animate" forState:UIControlStateNormal];
-    [animateButton addTarget:self action:@selector(animateButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [_contentView addSubview:animateButton];
+    UIButton *button = [self createButtonWithFrame:CGRectMake(10, 10, 100, 30) label:@"Animate"];
+    [button addTarget:self action:@selector(animateButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [_contentView addSubview:button];
 }
 
 - (void)setupAddPointButton {
-    UIButton *addPointButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    addPointButton.frame = CGRectMake(10, 50, 100, 30);
-    addPointButton.backgroundColor = [UIColor blackColor];
-    [addPointButton setTitle:@"Add point" forState:UIControlStateNormal];
-    [addPointButton addTarget:self action:@selector(addPointButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    [_contentView addSubview:addPointButton];    
+    UIButton *button = [self createButtonWithFrame:CGRectMake(10, 50, 100, 30) label:@"Add point"];
+    [button addTarget:self action:@selector(addPointButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [_contentView addSubview:button];
 }
 
+- (void)setupLogCoordinatesButton {
+    UIButton *button = [self createButtonWithFrame:CGRectMake(10, 90, 100, 30) label:@"NSLog points"];
+    [button addTarget:self action:@selector(logCoordinatesButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [_contentView addSubview:button];
+}
+
+- (UIButton *)createButtonWithFrame:(CGRect)frame label:(NSString *)label {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = frame;
+    button.backgroundColor = [UIColor blackColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:10];
+    [button setTitle:label forState:UIControlStateNormal];
+    return button;
+}
 
 - (void)animateButtonPressed {
     [self.view.layer addSublayer:_birdView.layer];
@@ -127,6 +136,34 @@
 	line.fillColor = [UIColor clearColor].CGColor;
 	line.lineWidth = 5.0;
 	[_contentView.layer addSublayer:line];
+}
+
+# pragma mark - Debug log
+- (void)logCoordinatesButtonPressed {
+    NSMutableString *s = [NSMutableString new];
+    [s appendString:@"\n*************CODE FOR CREATING THE PATH***************\n"];
+    [s appendString:@"UIBezierPath *path = [UIBezierPath bezierPath];\n"];
+    [s appendString:[NSString stringWithFormat:@"CGPoint pathStart = CGPointMake(%f, %f);\n", _startPoint.center.x, _startPoint.center.y]];
+    [s appendString:@"[path moveToPoint:pathStart];\n"];
+    
+    for (MyBezierPath *path in _myBezierPaths) {
+        NSString *startPoint = [NSString stringWithFormat:@"CGPointMake(pathStart.x + %i, pathStart.y + %i)",
+                                (int)(path.startPoint.center.x - _startPoint.center.x),
+                                (int)(path.startPoint.center.y - _startPoint.center.y)];
+        NSString *cPoint1 = [NSString stringWithFormat:@"CGPointMake(pathStart.x + %i, pathStart.y + %i)",
+                             (int)(path.controlPoint1.center.x - _startPoint.center.x),
+                             (int)(path.controlPoint1.center.y - _startPoint.center.y)];
+        NSString *cPoint2 = [NSString stringWithFormat:@"CGPointMake(pathStart.x + %i, pathStart.y + %i)",
+                             (int)(path.controlPoint2.center.x - _startPoint.center.x),
+                             (int)(path.controlPoint2.center.y - _startPoint.center.y)];
+        
+        [s appendString:[NSString stringWithFormat:@"[path addCurveToPoint:%@\n", startPoint]];
+        [s appendString:[NSString stringWithFormat:@"        controlPoint1:%@\n", cPoint1]];
+        [s appendString:[NSString stringWithFormat:@"        controlPoint2:%@];\n", cPoint2]];
+    }
+    
+    [s appendString:@"\n******************** END *****************************\n"];
+    NSLog(s, nil);
 }
 
 # pragma mark - MovableViewDeleage
